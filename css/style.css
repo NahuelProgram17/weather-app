@@ -356,3 +356,9 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Animación logo */
+.logo-icon {
+    display: inline-block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}

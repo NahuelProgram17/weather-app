@@ -137,3 +137,22 @@ document.querySelectorAll('.quick-btn').forEach(btn => {
         fetchWeather(city);
     });
 });
+
+
+// ===========================
+// ANIMACIÓN LOGO — íconos rotativos
+// ===========================
+const logoIcons = ['☀️', '⛅', '🌤️', '🌦️', '⛈️', '🌧️', '❄️', '🌫️', '🌪️'];
+let logoIndex = 0;
+const logoEl = document.getElementById('logoIcon');
+
+setInterval(() => {
+    logoEl.style.opacity = '0';
+    logoEl.style.transform = 'scale(0.5) rotate(-20deg)';
+    setTimeout(() => {
+        logoIndex = (logoIndex + 1) % logoIcons.length;
+        logoEl.textContent = logoIcons[logoIndex];
+        logoEl.style.opacity = '1';
+        logoEl.style.transform = 'scale(1) rotate(0deg)';
+    }, 300);
+}, 2000);
